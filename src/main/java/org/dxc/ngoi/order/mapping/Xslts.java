@@ -32,11 +32,11 @@ public class Xslts {
 		this.xslt = xslt;
 	}
 
-	public Integer getXsltId() {
+	public String getXsltId() {
 		return xsltId;
 	}
 
-	public void setXsltId(Integer xsltId) {
+	public void setXsltId(String xsltId) {
 		this.xsltId = xsltId;
 	}
 
