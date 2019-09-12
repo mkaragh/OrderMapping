@@ -4,11 +4,11 @@ metadata:
   name: ordermapping
 spec:
   ports:
-  - port: 8087
-    targetPort: 8087
-    name: http
   - port: 8088
     targetPort: 8088
+    name: http
+  - port: 8089
+    targetPort: 8089
     name: management
   selector:
     app: ordermapping

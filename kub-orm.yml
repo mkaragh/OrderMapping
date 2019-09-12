@@ -17,9 +17,9 @@ spec:
         image: mkadocker/validateorder:BUILD_ID_PLACEHOLDER
         imagePullPolicy: Always
         ports:
-        - containerPort: 8087
-          name: server
         - containerPort: 8088
+          name: server
+        - containerPort: 8089
           name: management
         env:
    
