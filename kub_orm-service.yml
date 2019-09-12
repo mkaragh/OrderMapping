@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ordermapping
+spec:
+  ports:
+  - port: 8087
+    targetPort: 8087
+    name: http
+  - port: 8088
+    targetPort: 8088
+    name: management
+  selector:
+    app: ordermapping
+  type: LoadBalancer

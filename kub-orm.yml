@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: validateorder
+spec:
+  selector:
+    matchLabels:
+      app: validateorder
+  replicas: 1 # comment - tells deployment to run 1 pods matching the template 
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: validateorder
+    spec:
+      containers:
+      - name: validateorder
+        image: mkadocker/validateorder:BUILD_ID_PLACEHOLDER
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8087
+          name: server
+        - containerPort: 8088
+          name: management
+        env:
+   
+        
