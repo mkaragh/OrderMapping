@@ -22,5 +22,20 @@ spec:
         - containerPort: 8089
           name: management
         env:
+        - name: NGOI_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              name: transactiondataservice
+              key: database-name
+        - name: NGOI_DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: transactiondataservice
+              key: database-user
+        - name: NGOI_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: transactiondataservice
+              key: database-password
    
         
